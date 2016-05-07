@@ -1,0 +1,28 @@
+{
+  "name": "react-todo",
+  "version": "1.0.0",
+  "description": "simple to-do app using react and flux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qtOS/react-todo.git"
+  },
+  "keywords": [
+    "react",
+    "to",
+    "do",
+    "list",
+    "fun",
+    "flux",
+    "funky"
+  ],
+  "author": "Aaron Krueger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qtOS/react-todo/issues"
+  },
+  "homepage": "https://github.com/qtOS/react-todo#readme"
+}
