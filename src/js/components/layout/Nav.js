@@ -17,10 +17,10 @@ export default class Nav extends React.Component{
             <Link to="activities">The List</Link>
           </li>
           <li class={favoriteClass}>
-            <Link to="activities">Favorites</Link>
+            <Link to="favorites">Favorites</Link>
           </li>
           <li class={settingsClass}>
-            <Link to="activities">Settings</Link>
+            <Link to="settings">Settings</Link>
           </li>
         </ul>
       </nav>

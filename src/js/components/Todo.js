@@ -1,27 +1,28 @@
-import React from "react"
+import React from "react";
 
 export default class Todo extends React.Component {
-  constructor(props){
+  constructor(props) {
     super();
   }
 
-  render(){
-    const { complete, edit, text } = this.props
+  render() {
+    const { complete, edit, text } = this.props;
 
     const icon = complete ? "\u2714" : "\u2716"
 
-    if(edit) {
+    if (edit) {
       return (
         <li>
-          <input value ={text} focus="focused"/>
+          <input value={text} focus="focused"/>
         </li>
-      )
+      );
     }
-    return(
+
+    return (
       <li>
         <span>{text}</span>
-        <span>{icon}</span>
+        <span> {icon}</span>
       </li>
-    )
+    );
   }
 }
