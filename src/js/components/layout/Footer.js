@@ -10,7 +10,7 @@ export default class Footer extends React.Component{
   render(){
     return(
       <footer>
-        <h2>Footer stuff goes here fam {this.name} appreciates you</h2>
+        <h2>Footer stuff goes here fam {this.state.name} appreciates you</h2>
       </footer>
     )
   }

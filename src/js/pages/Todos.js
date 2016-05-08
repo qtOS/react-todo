@@ -5,7 +5,7 @@ import * as TodoActions from "../actions/TodoActions";
 import TodoStore from "../stores/TodoStore";
 
 
-export default class Featured extends React.Component {
+export default class Todos extends React.Component {
   constructor() {
     super();
     this.getTodos = this.getTodos.bind(this);
@@ -15,21 +15,30 @@ export default class Featured extends React.Component {
   }
 
   componentWillMount() {
+    console.log('mounting');
     TodoStore.on("change", this.getTodos);
+    console.log('mounted');
   }
 
   componentWillUnmount() {
+    console.log('unmounted');
     TodoStore.removeListener("change", this.getTodos);
   }
 
   getTodos() {
     this.setState({
-      todos: TodoStore.getAll(),
+      todos: TodoStore.getAll()
     });
+    console.log('got Todos');
   }
 
   reloadTodos() {
     TodoActions.reloadTodos();
+    console.log('todos reloaded');
+  }
+
+  createTodo(){
+      TodoActions.createTodo(Date.now());
   }
 
   render() {
@@ -41,6 +50,7 @@ export default class Featured extends React.Component {
 
     return (
       <div>
+        <button onClick={this.createTodo.bind(this)}>CREATE</button>
         <button onClick={this.reloadTodos.bind(this)}>Reload!</button>
         <h1>Todos Poos</h1>
         <ul>{TodoComponents}</ul>
