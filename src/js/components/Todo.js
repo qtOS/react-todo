@@ -5,10 +5,12 @@ export default class Todo extends React.Component {
     super();
   }
 
+
   render() {
     const { complete, edit, text } = this.props;
 
     const icon = complete ? "\u2714" : "\u2716"
+    const editio = edit ? "\u2714" : "\u2714"
 
     if (edit) {
       return (
@@ -21,7 +23,7 @@ export default class Todo extends React.Component {
     return (
       <li>
         <span>{text}</span>
-        <span> {icon}</span>
+        <span>{icon}</span>
       </li>
     );
   }
